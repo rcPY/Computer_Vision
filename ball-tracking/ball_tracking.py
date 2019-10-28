@@ -55,6 +55,8 @@ while True:
 
 	# resize the frame, blur it, and convert it to the HSV
 	# color space
+	#rodar a webcam para modo espelho 
+	frame = cv2.flip(frame,1)
 	frame = imutils.resize(frame, width=600)
 	blurred = cv2.GaussianBlur(frame, (11, 11), 0)
 	hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
